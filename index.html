@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -16,32 +18,69 @@
                 <li><a href="https://github.com/Jasberries" target="_blank"><i class="fab fa-github"></i>Github</a></li>
                 <li><a href="https://jas-berry.itch.io/" target="_blank"><i class="fab fa-itch-io"></i>Itch</a></li>
                 <li><a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
-                <li><a href="#projects"><i class="fas fa-gamepad"></i>Projects</a></li>
+                <li><a href="cv.html"><i class="fas fa-file-lines"></i></i>CV</a></li>
                 <li><a href="mailto:jesper.gc.larsson@gmail.com"><i class="fas fa-address-book"></i>Contact</a></li>
             </ul>
         </nav>
         <div class="flex-container">
             <img height="400px" width="300px" src="images/portfolio.jpg">
             <div class="text-container">
-                <h1>About Me</h1>
-                <p>Welcome to my portfolio! I am a software developer with a 
-                    passion for creating innovative solutions. With experience in various programming 
-                    languages and frameworks, I enjoy tackling complex problems and delivering high-quality 
-                    results.</p>
-                    <a href= "#sds" class = "cta-button">Studio Downstairs</a>
-                    <a href= "#projects" class = "cta-button secondary">Check out my projects!</a>
+                <h1>Greetings!</h1>
+                <p>I'm Jesper, a game developer with a
+                    passion for creating innovative solutions and unique game experiences. I mainly work in
+                    <strong>Unity</strong>
+                    and have touched all corners of the engine which gives me a comprehensive understanding of its
+                    capabilities.
+                    I'm a Co-Founder at <strong>Studio Downstairs</strong> and are based in Skövde.</p>
+                <a href="#sds" class="cta-button">Studio Downstairs</a>
+                <a href="#projects" class="cta-button secondary">Check out my projects!</a>
             </div>
         </div>
     </header>
 
-    <section id="projects">   
-        <div class="flex-container">
-            <h2>Projects</h2>
-            <p>Here are some of the projects I've worked on:</p>
+    <section id="projects">
+        <div class="project-container">
+            <h1>Projects</h1>
+        </div>
+        <div class="project-grid">
+            <a href="projects/find-or-be-found.html" class="project-card">
+                <img src="images/FobF-keyart.png" alt="Find or be Found screenshot">
+                <div class="project-content">
+                    <h3>Find or be Found</h3>
+                    <p>A co-op horror game where you and a friends must work together to steal specific objects. I was the 
+                        only programmer on the project and built the entire game in Unity, including all systems, tools, and gameplay.
+                    </p>
+                    <span class="timeframe"><i class="fas fa-clock"></i> 1.5 years</span>
+                </div>
+            </a>
+             <a href="projects/adssistance.html" class="project-card">
+                <img src="images/none.png" alt="Adssistance screenshot">
+                <div class="project-content">
+                    <h3>Adssistance</h3>
+                    <p>A game with multiple window applications.</p>
+                    <span class="timeframe"><i class="fas fa-clock"></i> Ongoing</span>
+                </div>
+            </a>
+            <a href="projects/i-unplugged-the-kids.html" class="project-card">
+                <img src="images/IUK-keyart.png" alt="I Unplugged the Kids screenshot">
+                <div class="project-content">
+                    <h3>I Unplugged the Kids</h3>
+                    <p>A simulation co-op game where you take care of robot children in a kindergarten with up to 4 players.</p>
+                    <span class="timeframe"><i class="fas fa-clock"></i> Onhold</span>
+                </div>
+            </a>
+            <a href="projects/tool.html" class="project-card">
+                <img src="images/none.png" alt="Tools screenshot">
+                <div class="project-content">
+                    <h3>Tools</h3>
+                    <p>A collection of tools for game development in Unity. </p>
+                    <span class="timeframe"><i class="fas fa-clock"></i> Ongoing</span>
+                </div>
+            </a>
         </div>
     </section>
 
-    <footer>    
+    <footer>
         <a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank">LinkedIn</a>
         <a href="#projects">Projects</a>
         <a href="mailto:jesper.gc.larsson@gmail.com">Contact</a>
