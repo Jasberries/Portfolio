@@ -3,7 +3,7 @@
 
 :root {
     --base-color: #ffffff;
-    --text-color: #000000;
+    --text-color: #131111;
     --primary-color: #ffc06e;
     --secondary-color: #8D8DFF;
     --color-1: #F9F6F3;
@@ -101,7 +101,7 @@ h1 {
     text-decoration: none;
     padding: 0.75em 1.25em;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--base-color);
     text-decoration: none;
     border-radius: 0.5em;
     font-weight: 600;
@@ -111,8 +111,23 @@ h1 {
     background-color: var(--secondary-color);
 }
 
-.fab, .fas  {
+.fab, .fas {
   font-size: 18px;
-  color: #333;
+  color: var(--text-color);
   margin-right: 5px;
+}
+
+footer {
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 1em;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
