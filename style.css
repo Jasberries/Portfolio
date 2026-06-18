@@ -6,7 +6,7 @@
     --primary-color: #ffc06e;
     --secondary-color: #8D8DFF;
     --color-1: #F9F6F3;
-    --color-2: #F3F7F9;
+    --color-2: #3091c2;
     --color-3: #F6F3F9;
 }
 
@@ -173,9 +173,10 @@ h1 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* bilden måste vara 1232 x 706 */
 .project-card img {
-    width: 500px;
-    height: 350px;
+    width: auto;
+    height: 312px;
     object-fit: scale-down;
 }
 
