@@ -220,6 +220,7 @@ h1 {
     background-color: var(--color-2);
     border-radius: 1em;
     overflow: hidden;
+    height: 100%;
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -244,6 +245,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    flex: 1;
 }
 
 .project-content h3 {
@@ -265,6 +267,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 1em;
+    margin-top: auto;
 }
 
 video,
