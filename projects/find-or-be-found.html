@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <nav>
         <ul>
@@ -15,30 +17,94 @@
             <li><a href="../index.html#projects"><i class="fas fa-code"></i>Projects</a></li>
             <li><a href="https://github.com/Jasberries" target="_blank"><i class="fab fa-github"></i>Github</a></li>
             <li><a href="https://jas-berry.itch.io/" target="_blank"><i class="fab fa-itch-io"></i>Itch</a></li>
-            <li><a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank"><i
+                        class="fab fa-linkedin"></i>LinkedIn</a></li>
             <li><a href="cv.html"><i class="fas fa-file-lines"></i></i>CV</a></li>
             <li><a href="mailto:jesper.gc.larsson@gmail.com"><i class="fas fa-address-book"></i>Contact</a></li>
         </ul>
     </nav>
 
-    <section>
-        <a href="../index.html#projects" class="cta-button"><i class="fas fa-arrow-left"></i> Back to Projects</a>
-        <h1>Find or be Found</h1>
-        <p class="engine"><i class="fab fa-unity"></i> Unity</p>
-        <p class="timeframe"><i class="fas fa-clock"></i> 1.5 years</p>
-        <iframe width="100%" height="450" src="https://www.youtube.com/embed/7zO53yoWYuk" title="Project gameplay video"
-            frameborder="0"
+    <section class="project-intro">
+        <a href="../index.html#projects" class="cta-button"><i class="fas fa-arrow-left project-arrow"></i> Back to
+            Projects</a>
+        <h1>
+            <a href="https://store.steampowered.com/app/3223330/Find_or_be_Found/" target="_blank"
+                class="project-title-link">
+                Find or be Found <i class="fab fa-steam" aria-hidden="true"></i>
+            </a>
+        </h1>
+        <iframe width="100%" height="600" src="https://www.youtube.com/embed/7zO53yoWYuk" title="Project gameplay video"
+            frameborder="3"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
         </iframe>
-        <p>This is where you write the full breakdown: what the project was, what problem it solved, what your role was, what tools or systems you built, and any interesting technical challenges you tackled.</p>
-        <p>You can add as many paragraphs, images, or even embedded video/gifs as you want here.</p>
     </section>
 
-    <footer>    
+    <section class="project-info">
+        <div class="project-about">
+            <h2>Overview</h2>
+            <p class="about-text">
+                Find or Be Found is my debut premium game, both as a game developer and as a co-founder of Studio
+                Downstairs. As the sole programmer, I led the planning and execution of the large-scale project, which
+                proved both challenging and highly rewarding. I gained hands-on experience across the full development
+                cycle, from prototyping to release and post-launch support. Throughout development, I balanced
+                fluctuating workloads, dedicating between 50-100% of my time while supporting myself. During the final
+                six months, we collaborated with two interns in design and 3D art, an experience that was valuable for
+                both them and me.
+            </p>
+        </div>
+
+        <div class="quick-info">
+            <h2 class="quick-info-title">Info</h2>
+            <p class="quick-info-row"><i class="fas fa-calendar-days quick-image"></i> Release date: 24 June, 2025</p>
+            <p class="quick-info-row"><i class="fab fa-steam quick-image"></i> Steam (PC)</p>
+            <p class="quick-info-row"><i class="fas fa-circle-user quick-image"></i> Role: Programmer & Designer</p>
+            <p class="quick-info-row"><i class="fas fa-clock quick-image"></i> Time frame: 1.5 years</p>
+            <p class="quick-info-row"><i class="fas fa-users quick-image"></i> Team size: 4 core devs + 2 interns</p>
+            <p class="quick-info-row"><i class="fab fa-unity quick-image"></i> Unity (C#)</p>
+        </div>
+    </section>
+
+    <section class="project-body">
+        <h2>Key Contributions</h2>
+        <p class="about-text">- Multiplayer</p>
+        <p class="about-text">- Level generation</p>
+        <p class="about-text">- Object generation</p>
+        <p class="about-text">- AI behaviours</p>
+        <p class="about-text">- Third-party integrations (Steam, voice chat, etc.)</p>
+        <p class="about-text">- System design & implementation</p>
+        <p class="about-text">- First-person controller</p>
+    </section>
+
+    <section class="project-body">
+        <h2>Multiplayer</h2>
+        <p class="about-text">This was the first time i dived into multiplayer development.</p>
+        <p> My network-solution that i choose was fishnet networking</p>
+        <img src="../images/fishnet_with_text_light.png" alt="Fishnet Logo" width="auto" height="200">
+    </section>
+
+     <section class="project-body">
+        <h2>Item Generation</h2>
+        <p class="about-text">This was the first time i dived into multiplayer development.</p>
+    </section>
+
+     <section class="project-body">
+        <h2>Tools</h2>
+        <p class="about-text">This was the first time i dived into multiplayer development.</p>
+    </section>
+
+    <section class="project-body">
+        <h2>Take aways</h2>
+        <p class="about-text">This is where you write the full breakdown: what the project was, what problem it solved,
+            what your role was,
+            what tools or systems you built, and any interesting technical challenges you tackled.</p>
+    </section>
+
+    <footer>
         <a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank">LinkedIn</a>
         <a href="../index.html#projects">Projects</a>
         <a href="mailto:jesper.gc.larsson@gmail.com">Contact</a>
     </footer>
 </body>
+
 </html>
