@@ -7,6 +7,7 @@
     --secondary-color: #5FB89C;
     --color-1: #1E242E;
     --color-2: #7C8694;
+    --color-3: #5EA8BA;
 }
 
 * {
@@ -306,9 +307,23 @@ h1 {
     padding: 1.75em 1.25em;
 }
 
-.project-body img {
+.project-body .project-image-1 {
     width: auto;
     height: 200px;
+    object-fit: scale-down;
+    margin: 2em 0;
+}
+
+.project-body .project-image-2 {
+    width: auto;
+    height: 400px;
+    object-fit: scale-down;
+    margin: 2em 0;
+}
+
+.project-body img {
+    width: auto;
+    height: 400px;
     object-fit: scale-down;
     margin: 2em 0;
 }
