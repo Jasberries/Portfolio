@@ -11,16 +11,40 @@
 </head>
 
 <body>
-    <nav>
+    <button id="open-sidebar-button" onclick="openSidebar()">
+        <i class="fas fa-bars navbar-button"></i>
+    </button>
+
+    <nav id="navbar">
         <ul>
             <li><a href="../index.html">Jesper Larsson</a></li>
-            <li><a href="../index.html#projects"><i class="fas fa-code"></i>Projects</a></li>
-            <li><a href="https://github.com/Jasberries" target="_blank"><i class="fab fa-github"></i>Github</a></li>
-            <li><a href="https://jas-berry.itch.io/" target="_blank"><i class="fab fa-itch-io"></i>Itch</a></li>
-            <li><a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank"><i
-                        class="fab fa-linkedin"></i>LinkedIn</a></li>
-            <li><a href="cv.html"><i class="fas fa-file-lines"></i></i>CV</a></li>
-            <li><a href="mailto:jesper.gc.larsson@gmail.com"><i class="fas fa-address-book"></i>Contact</a></li>
+            <button id="close-sidebar-button" onclick="closeSidebar()">
+                <i class="fas fa-x navbar-button"></i>
+            </button>
+
+            <li> <a href="../index.html#projects">
+                    <span class="nav-link-text"><i class="fas fa-code"></i> Projects</span> </a>
+            </li>
+
+            <li> <a href="https://github.com/Jasberries" target="_blank">
+                    <span class="nav-link-text"><i class="fab fa-github"></i> GitHub</span> </a>
+            </li>
+
+            <li> <a href="https://jas-berry.itch.io/" target="_blank">
+                    <span class="nav-link-text"><i class="fab fa-itch-io"></i> Itch.io</span> </a>
+            </li>
+
+            <li> <a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank">
+                    <span class="nav-link-text"><i class="fab fa-linkedin"></i> LinkedIn</span> </a>
+            </li>
+
+            <li> <a href="CV/Jesper_Larsson_Game_Developer.pdf" target="_blank">
+                    <span class="nav-link-text"><i class="fas fa-file-lines"></i> CV</span> </a>
+            </li>
+
+            <li> <a href="mailto:jesper.gc.larsson@gmail.com">
+                    <span class="nav-link-text"><i class="fas fa-address-book"></i> Contact</span> </a>
+            </li>
         </ul>
     </nav>
 
@@ -126,6 +150,7 @@
         <a href="../index.html#projects">Projects</a>
         <a href="mailto:jesper.gc.larsson@gmail.com">Contact</a>
     </footer>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

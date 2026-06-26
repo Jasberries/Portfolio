@@ -221,6 +221,9 @@ h1 {
     cursor: pointer;
 }
 
+.navbar-button{
+    font-size: 2em;
+}
 .navbar-button:hover {
     color: var(--primary-color);
 }
@@ -429,17 +432,8 @@ footer a:hover {
     transition: opacity 200ms ease;
 }
 
+
 @media (max-width: 1000px) {
-    header {
-        text-align: center;
-    }
-
-    header .text-container {
-        padding-top: 0;
-    }
-}
-
-@media (max-width: 750px) {
 
     #open-sidebar-button {
         display: block;
@@ -455,7 +449,12 @@ footer a:hover {
         pointer-events: auto;
     }
 
+    header .text-container {
+        padding-top: 0;
+    }
+
     header {
+        text-align: center;
         margin-top: 0;
     }
 
