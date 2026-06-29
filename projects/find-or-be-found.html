@@ -107,19 +107,32 @@
     <section class="project-body">
         <h2>Networking</h2>
         <p class="about-text">This was the first time i dived into networking development. I started looking into
-            Network for Gameobjects since i</p>
-        <p> My network-solution that i choose was fishnet networking</p>
+            dirfferent solutions that would fit the project the best and decided to go with Fishnet Networkig Evolved. I
+            choose Fishnet because it seemed flexible and easy to use.</p>
         <img class="project-image-1" src="../images/fishnet_with_text_light.png" alt="Fishnet Logo">
     </section>
 
     <section class="project-body">
         <h2>Item Generation</h2>
-        <p class="about-text">A big part of the game is the generating the different items that you can find. I needed a
-            way of ensuring that the items generated were unique and valid. I also needed a way of checking and see if
-            the player had found the correct item.</p>
+        <p class="about-text">A large part of the game revolves around generating the items players can discover, so I
+            needed a reliable way to ensure each one was both valid and unique. I also needed a system to verify whether
+            a player had found the correct item. To solve this, I designed an ID-based system where every item
+            combination is assigned a unique identifier. This allows me to efficiently store and retrieve item data,
+            track how many instances of a specific item have spawned, and measure how similar different items are to one
+            another.</p>
         <img class="project-image-2" src="../images/obj-generation.png" alt="Obj generation">
-        <p class="about-text">With this I could easily check if the item that was returned was the correct quest item
-            that was choosen.</p>
+        <p>For example, if we take a bottle, we can see that the type is "bottle," which corresponds to number #6. The
+            difficulty in this case is #1. The base object is the whole bottle body, numbered #3. The first material is
+            the green base material (#4), and the supporting material is the text label (#2). On top of the bottle is a
+            lid, which is the hook object (#1). Lastly, there's the symbol (#5), which gives the object its ID:
+            <strong>#6134215</strong>.
+        </p>
+        <img class="project-image-2" src="../images/bottle.png" alt="Bottle">
+        <p class="about-text">With this ID system, validating a delivery becomes easy: I simply compare the ID of the
+            object the player handed in against the expected ID for the quest, and if they match, the objective is
+            complete. Since every relevant property (type, difficulty, base object, materials, and symbol) is already
+            baked into the ID itself, there's no need for separate checks or special-case logic per quest, one
+            comparison covers it all.</p>
     </section>
 
     <section class="project-body">
