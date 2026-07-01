@@ -11,9 +11,12 @@
 </head>
 
 <body>
-    <button id="open-sidebar-button" onclick="openSidebar()">
-        <i class="fas fa-bars navbar-button"></i>
-    </button>
+    <div id="mobile-topbar">
+        <a href="../index.html" class="mobile-topbar-name">Jesper Larsson</a>
+        <button id="open-sidebar-button" onclick="openSidebar()">
+            <i class="fas fa-bars navbar-button"></i>
+        </button>
+    </div>
 
     <nav id="navbar">
         <ul>
@@ -123,12 +126,12 @@
             refactoring along the way.</p>
 
         <p class="about-text"></p>
-            We don't use prediction in the game since the two players never directly interact with each other, which
-            simplifies the implementation. Even so, I still needed to build a lobby system that integrates with Steam's
-            API, as well as implement a voice chat solution with support for muting and unmuting players.
-            There was definitely a steep learning curve in understanding RPCs and how to properly structure networked
-            systems. After a lot of desync issues and objects not behaving as expected, I eventually managed to get
-            everything working well enough.
+        We don't use prediction in the game since the two players never directly interact with each other, which
+        simplifies the implementation. Even so, I still needed to build a lobby system that integrates with Steam's
+        API, as well as implement a voice chat solution with support for muting and unmuting players.
+        There was definitely a steep learning curve in understanding RPCs and how to properly structure networked
+        systems. After a lot of desync issues and objects not behaving as expected, I eventually managed to get
+        everything working well enough.
         </p>
     </section>
 
@@ -147,7 +150,7 @@
             lid, which is the hook object (#1). Lastly, there's the symbol (#5), which gives the object its ID:
             <strong>#6134215</strong>.
         </p>
-        <img class="project-image-2" src="../images/bottle.png" alt="Bottle Image">
+        <img class="project-image-1" src="../images/bottle.png" alt="Bottle Image">
         <p class="about-text">With this ID system, validating a delivery becomes easy: I simply compare the ID of the
             object the player handed in against the expected ID for the quest, and if they match, the objective is
             complete. Since every relevant property (type, difficulty, base object, materials, and symbol) is already
@@ -192,7 +195,7 @@
         <a href="../index.html#projects">Projects</a>
         <a href="mailto:jesper.gc.larsson@gmail.com">Contact</a>
     </footer>
-    <script src="script.js" defer></script>
+    <script src="../script.js" defer></script>
 </body>
 
 </html>

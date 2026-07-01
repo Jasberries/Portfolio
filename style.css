@@ -221,9 +221,10 @@ h1 {
     cursor: pointer;
 }
 
-.navbar-button{
+.navbar-button {
     font-size: 2em;
 }
+
 .navbar-button:hover {
     color: var(--primary-color);
 }
@@ -260,11 +261,12 @@ h1 {
     margin-right: 5px;
 }
 
-/* bilden måste vara 1232 x 706 */
+/* bilden borde vara 1232 x 706 */
 .project-card img {
-    width: auto;
-    height: 312px;
-    object-fit: scale-down;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .project-content {
@@ -318,25 +320,23 @@ h1 {
     padding: 1.75em 1.25em;
 }
 
-.project-body .project-image-1 {
-    width: auto;
-    height: 200px;
-    object-fit: scale-down;
-    margin: 2em 0;
+.project-image-2 {
+
+    width: 100%;
+    max-width: 1500px;
+    height: auto;
+    object-fit: contain;
+    margin: 2em auto;
+    display: block;
 }
 
-.project-body .project-image-2 {
-    width: auto;
-    height: 400px;
-    object-fit: scale-down;
-    margin: 2em 0;
-}
-
-.project-body img {
-    width: auto;
-    height: 400px;
-    object-fit: scale-down;
-    margin: 2em 0;
+.project-image-1 {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    margin: 2em auto;
+    display: block;
 }
 
 .about-text {
@@ -408,9 +408,16 @@ iframe {
 }
 
 .gif {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
     border-radius: 1em;
     border: 2px solid var(--text-color);
+    display: block;
+    margin-bottom: 2em;
 }
+
+
 
 footer {
     padding-bottom: 1.5em;
@@ -437,6 +444,9 @@ footer a:hover {
     transition: opacity 200ms ease;
 }
 
+#mobile-topbar {
+    display: none;
+}
 
 @media (max-width: 1000px) {
 
@@ -486,14 +496,10 @@ footer a:hover {
         transform: scaleX(1);
     }
 
-   nav li:first-child {
-        font-size: 1.3em;
+    nav li:first-child {
+        display: none;
     }
 
-    nav li:first-child a {
-        padding-left: 0.6em ;
-        white-space: nowrap;
-    }
 
     nav.show {
         right: 0;
@@ -501,6 +507,7 @@ footer a:hover {
 
     nav ul {
         width: 100%;
+        padding-top: 2em;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -508,5 +515,49 @@ footer a:hover {
     nav a {
         width: 100%;
         padding-left: 2.5em;
+    }
+
+    .gif {
+        max-width: 400px;
+        max-height: 200px;
+        border-radius: 1em;
+        border: 2px solid var(--text-color);
+        margin: 2em auto;
+    }
+
+    .project-intro,
+    .flex-container {
+        margin-top: 4em;
+    }
+
+
+    #mobile-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 8;
+        /* below nav's 10, above overlay's 5 */
+        padding: 0.75em 1.5em;
+        background-color: rgba(30, 36, 46, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .mobile-topbar-name {
+        font-family: Merriweather, Poppins, 'Segoe UI';
+        font-weight: bold;
+        font-size: 1.4em;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        background: var(--primary-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
 }
