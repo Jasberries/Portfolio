@@ -341,6 +341,7 @@ h1 {
 
 .about-text {
     margin-top: 0.5em;
+    margin-bottom: 1em;
 }
 
 .quick-info {
@@ -376,6 +377,10 @@ h1 {
     color: var(--color-1);
     margin-bottom: 0.5em;
     margin-left: 20px;
+}
+
+.tool-title {
+    margin-top: 1em;
 }
 
 .timeframe {
