@@ -231,7 +231,7 @@ h1 {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: 3em;
     width: min(75em, 100%);
     margin: 1em auto 3em auto;
@@ -405,6 +405,8 @@ h1 {
 video,
 iframe {
     border-radius: 1em;
+    width: 100%;
+    height: 640px;
 }
 
 .gif {
@@ -416,8 +418,6 @@ iframe {
     display: block;
     margin-bottom: 2em;
 }
-
-
 
 footer {
     padding-bottom: 1.5em;
@@ -529,7 +529,6 @@ footer a:hover {
     .flex-container {
         margin-top: 4em;
     }
-
 
     #mobile-topbar {
         display: flex;
