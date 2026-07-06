@@ -32,6 +32,30 @@ h3 {
     font-family: Merriweather, Poppins, 'Segoe UI';
 }
 
+h1 {
+    font-size: clamp(1.4rem, 5vw + 0.5rem, 2.5em);
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+header,
+section {
+    margin: 0 auto 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--color-1);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+.header-slim {
+    padding: 0.1em min(2em, 15%);
+    margin-bottom: 1em;
+}
+
+.header-title {
+    color: var(--primary-color);
+}
+
 nav {
     margin: 0 auto 3em auto;
     width: min(2000px, 100%);
@@ -114,35 +138,10 @@ nav .fas {
     opacity: 0.9;
 }
 
-header,
-section {
-    margin: 0 auto 2em auto;
-    width: min(75em, 100%);
-    background-color: var(--color-1);
-    padding: min(2em, 15%);
-    border-radius: 1em;
-}
-
-.header-slim {
-    padding: 0.1em min(2em, 15%);
-    margin-bottom: 1em;
-}
-
-.header-title {
-    color: var(--primary-color);
-}
-
 .flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 3em;
-}
-
-.project-container {
-    display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 3em;
 }
@@ -156,11 +155,6 @@ header img {
 
 .text-container {
     flex: 0 1 34em;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
 }
 
 .text-container p {
@@ -237,6 +231,13 @@ h1 {
     margin: 1em auto 3em auto;
 }
 
+.project-title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
 .project-card {
     background-color: var(--color-2);
     border-radius: 1em;
@@ -298,6 +299,15 @@ h1 {
     color: var(--text-color);
     margin-left: 0.5em;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    word-break: break-word;
+}
+
+.project-title-link i {
+    margin-left: 0.4em;
+    white-space: nowrap;
 }
 
 .project-title-link:hover {
@@ -339,7 +349,7 @@ h1 {
     display: block;
 }
 
-.about-text {
+.default-text {
     margin-top: 0.5em;
     margin-bottom: 1em;
 }
@@ -383,13 +393,7 @@ h1 {
     margin-top: 1em;
 }
 
-.timeframe {
-    font-size: 0.9em;
-    color: var(--text-color);
-    opacity: 0.7;
-}
-
-.engine {
+.project-quick-info {
     font-size: 0.9em;
     color: var(--text-color);
     opacity: 0.7;
@@ -406,7 +410,8 @@ video,
 iframe {
     border-radius: 1em;
     width: 100%;
-    height: 640px;
+    aspect-ratio: 16 / 9;
+    height: auto;
 }
 
 .gif {
