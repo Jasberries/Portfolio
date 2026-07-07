@@ -97,21 +97,29 @@
         <p class="default-text">- Building system</p>
         <p class="default-text">- AI behaviours</p>
         <p class="default-text">- Interactive gameplay</p>
+        <p class="default-text">- Texture painting</p>
     </section>
 
     <section>
         <h2>Networking</h2>
-        <p class="default-text">This project came with a few new challenges when it came to networking that "Find or be
-            Found" did not have. One of them being prediction. I needed to understand Replicate and Reconcile that
-            Fishnet was using and then layer try to predict Unity's physics with it. Fixing "normal" physics object that
-            just needs to interact with the physics system was not hard since there was a build in system for that. The
-            problem was when more complex physics objects needed to be predicted. </p>
+        <p class="default-text">This project came with a few new challenges when it came to networking that <em>Find or
+                Be Found</em> did not have. One of them being prediction. I needed to understand Replicate and Reconcile
+            that Fishnet was using and then layer try to predict Unity's physics with it. Fixing "normal" physics object
+            that just needs to interact with the physics system was not hard since there was a build in system for that.
+            The problem was when more complex physics objects needed to be predicted. </p>
+
         <p class="default-text">The baby bots is by far the most complext physics object in the game, since it needed
             ragdoll support which lead to a complex structure of colliders. You can also pick them up and throw
-            them. This meant that I needed to create a more custom solution, this was a bigger obsticle that I imagined.</p>
-        <p class="default-text">- Ragdoll</p>
-        <p class="default-text">- Prediction</p>
-        <p class="default-text">- AI pathfinding</p>
+            them. This meant that I needed to create a more custom solution, this was a bigger obsticle that I imagined.
+        </p>
+
+        <img src="../images/Network-physics.gif" alt="Building system Gif" class="gif">
+
+        <p class="default-text"> When the bots are navigating using pathfinding, one type of prediction is required, but
+            when they are physically thrown or displaced, a different approach is needed. Getting both systems to work
+            together proved challenging. Improving one would often cause issues in the other. I wasn't able to fully
+            resolve this before the project was put on hold, but I managed to reach a good enough state for the time
+            being. </p>
     </section>
 
     <section>
@@ -150,16 +158,21 @@
 
         <img src="../images/paint.gif" alt="Texture Painting Gif" class="gif">
 
-        <p class="default-text"> The system is also well-suited for networking. Only the start point, end point, and a
+        <p class="default-text"> The system is also easy to networking. Only the start point, end point, and a
             color index need to be sent to the client, which can then reconstruct the exact same brush stroke locally.
             This keeps bandwidth usage very low, since only a few integer-based values are transmitted. </p>
     </section>
 
     <section>
         <h2>Take Aways</h2>
-        <p class="default-text">Eventhough the project got put on hold, I learned a lot during the development. The
-            biggest learning was the big challenge of physics based networking that is predicted. Despite it not being
-            100% solved, I still learned a lot about netwokring and the network solution. </p>
+        <p class="default-text"> Even though the project was put on hold, I learned a great deal during its development.
+            I particularly enjoyed creating dynamic and interactive systems, such as the building system and the texture
+            painting tool. The bots also feature significantly improved AI logic compared to <em>Find or Be Found</em>,
+            and I'm glad I had the opportunity to further develop my skills in that area. </p>
+
+        <p class="default-text"> However, the largest learning experience came from tackling the challenges of
+            physics-based network prediction. While I didn't fully achieve a complete and stable solution, I gained a
+            strong understanding of prediction systems and Fishnet as a networking solution. </p>
     </section>
 
     <footer>
