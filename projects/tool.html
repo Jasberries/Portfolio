@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +9,100 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <nav>
+    <div id="mobile-topbar">
+        <a href="../index.html" class="mobile-topbar-name">Jesper Larsson</a>
+        <button id="open-sidebar-button" onclick="openSidebar()">
+            <i class="fas fa-bars navbar-button"></i>
+        </button>
+    </div>
+
+    <div id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+    <nav id="navbar">
         <ul>
             <li><a href="../index.html">Jesper Larsson</a></li>
-            <li><a href="../index.html#projects"><i class="fas fa-code"></i>Projects</a></li>
-            <li><a href="https://github.com/Jasberries" target="_blank"><i class="fab fa-github"></i>Github</a></li>
-            <li><a href="https://jas-berry.itch.io/" target="_blank"><i class="fab fa-itch-io"></i>Itch</a></li>
-            <li><a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
-            <li><a href="../CV/Jesper Larsson Game Programmer.pdf"><i class="fas fa-file-lines"></i></i>CV</a></li>
-            <li><a href="mailto:jesper.gc.larsson@gmail.com"><i class="fas fa-address-book"></i>Contact</a></li>
+            <button id="close-sidebar-button" onclick="closeSidebar()">
+                <i class="fas fa-x navbar-button"></i>
+            </button>
+            <li> <a href="../index.html#projects">
+                    <span class="nav-link-text"><i class="fas fa-code"></i>Projects</span> </a>
+            </li>
+
+            <li> <a href="https://github.com/Jasberries" target="_blank">
+                    <span class="nav-link-text"><i class="fab fa-github"></i>GitHub</span> </a>
+            </li>
+
+            <li> <a href="https://jas-berry.itch.io/" target="_blank">
+                    <span class="nav-link-text"><i class="fab fa-itch-io"></i>Itch</span> </a>
+            </li>
+
+            <li> <a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank">
+                    <span class="nav-link-text"><i class="fab fa-linkedin"></i>LinkedIn</span> </a>
+            </li>
+
+            <li> <a href="../CV/Jesper Larsson Game Programmer.pdf" target="_blank">
+                    <span class="nav-link-text"><i class="fas fa-file-lines"></i>CV</span> </a>
+            </li>
+
+            <li> <a href="mailto:jesper.gc.larsson@gmail.com">
+                    <span class="nav-link-text"><i class="fas fa-address-book"></i>Contact</span> </a>
+            </li>
         </ul>
     </nav>
 
-    <section>
-        <a href="../index.html#projects" class="cta-button"><i class="fas fa-arrow-left"></i> Back to Projects</a>
-        <h1>Tools for Unity</h1>
-        <p class="engine"><i class="fab fa-unity"></i> Unity</p>
-        <p class="timeframe"><i class="fas fa-clock"></i> Ongoing</p>
-        <p>This is where you write the full breakdown: what the project was, what problem it solved, what your role was, what tools or systems you built, and any interesting technical challenges you tackled.</p>
-        <p>You can add as many paragraphs, images, or even embedded video/gifs as you want here.</p>
+    <section class="project-intro">
+        <a href="../index.html#projects" class="cta-button"><i class="fas fa-arrow-left project-arrow"></i> Back to
+            Projects</a>
+        <h1>
+            <p class="project-title"> Utility & Tools </p>
+        </h1>
+
     </section>
 
-    <footer>    
+    <section class="project-info">
+        <div class="project-about">
+            <h2>Overview</h2>
+            <p class="default-text">
+                This is my personal library of useful tools and utilities that I have created over the years. It
+                includes a variety of scripts, plugins, and other resources that can help streamline development
+                processes and enhance productivity. The tools are designed to be versatile and adaptable to different
+                projects.
+            </p>
+        </div>
+
+        <div class="quick-info">
+            <h2 class="quick-info-title">Info</h2>
+            <p class="quick-info-row"><i class="fas fa-calendar-days quick-image"></i> <strong>Release
+                    date:</strong> None</p>
+            <p class="quick-info-row"><i class="fas fa-circle-user quick-image"></i> <strong>Role:</strong> Programmer
+            </p>
+            <p class="quick-info-row"><i class="fas fa-clock quick-image"></i> <strong>Time frame:</strong> Ongoing</p>
+            <p class="quick-info-row"><i class="fas fa-users quick-image"></i> <strong>Team size:</strong> 1 dev
+            </p>
+            <p class="quick-info-row"><i class="fab fa-unity quick-image"></i> <strong>Unity</strong> (C#)</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Contributions</h2>
+        <p class="default-text">- Console</p>
+        <p class="default-text">- First Person Controller</p>
+        <p class="default-text">- Hierarchy Icon Display</p>
+        <p class="default-text">- Reporting System</p>
+    </section>
+
+    <section>
+        <h2>MORE COMING SOON</h2>
+    </section>
+
+    <footer>
         <a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank">LinkedIn</a>
         <a href="../index.html#projects">Projects</a>
         <a href="mailto:jesper.gc.larsson@gmail.com">Contact</a>
     </footer>
+    <script src="../script.js" defer></script>
 </body>
+
 </html>
