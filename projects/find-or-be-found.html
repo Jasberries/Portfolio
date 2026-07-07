@@ -72,7 +72,7 @@
     <section class="project-info">
         <div class="project-about">
             <h2>Overview</h2>
-            <p class="about-text">
+            <p class="default-text">
                 Find or Be Found is my debut premium game, both as a game developer and as a co-founder of Studio
                 Downstairs. As the sole programmer, I led the planning and execution of the large-scale project, which
                 proved both challenging and highly rewarding. I gained hands-on experience across the full development
@@ -98,20 +98,20 @@
         </div>
     </section>
 
-    <section class="project-body">
+    <section>
         <h2>Key Contributions</h2>
-        <p class="about-text">- Networking</p>
-        <p class="about-text">- Level generation</p>
-        <p class="about-text">- Object generation</p>
-        <p class="about-text">- AI behaviours</p>
-        <p class="about-text">- Third-party integrations (Steam, voice chat, etc.)</p>
-        <p class="about-text">- System design & implementation</p>
-        <p class="about-text">- First person controller</p>
+        <p class="default-text">- Networking</p>
+        <p class="default-text">- Level generation</p>
+        <p class="default-text">- Object generation</p>
+        <p class="default-text">- AI behaviours</p>
+        <p class="default-text">- Third-party integrations (Steam, voice chat, etc.)</p>
+        <p class="default-text">- System design & implementation</p>
+        <p class="default-text">- First person controller</p>
     </section>
 
-    <section class="project-body">
+    <section>
         <h2>Networking</h2>
-        <p class="about-text">
+        <p class="default-text">
             This was my first time diving into networking development. I started by exploring different solutions that
             would best fit the project and ultimately decided on FishNet Networking Evolved. I chose FishNet because it
             felt flexible and easy to work with. It also has an active Discord community where you can get help with
@@ -120,14 +120,14 @@
 
         <img class="project-image-1" src="../images/fishnet_with_text_light.png" alt="FishNet Logo">
 
-        <p class="about-text">
+        <p class="default-text">
             We decided to make Find or be Found multiplayer partway through development, after already building a
             single-player prototype. This meant I had to introduce networking into an existing structure, and since I
             didn't yet fully understand how to think about or prioritize systems in a networked game, it led to a lot of
             “silver tape” and spaghetti solutions early on. That, in turn, resulted in plenty of debugging and
             refactoring along the way.</p>
 
-        <p class="about-text"></p>
+        <p class="default-text"></p>
         We don't use prediction in the game since the two players never directly interact with each other, which
         simplifies the implementation. Even so, I still needed to build a lobby system that integrates with Steam's
         API, as well as implement a voice chat solution with support for muting and unmuting players.
@@ -137,9 +137,9 @@
         </p>
     </section>
 
-    <section class="project-body">
+    <section>
         <h2>Item Generation</h2>
-        <p class="about-text">A large part of the game revolves around generating the items players can discover, so I
+        <p class="default-text">A large part of the game revolves around generating the items players can discover, so I
             needed a reliable way to ensure each one was both valid and unique. I also needed a system to verify whether
             a player had found the correct item. To solve this, I designed an ID-based system where every item
             combination is assigned a unique identifier. This allows me to efficiently store and retrieve item data,
@@ -153,37 +153,37 @@
             <strong>#6134215</strong>.
         </p>
         <img class="project-image-1" src="../images/bottle.png" alt="Bottle Image">
-        <p class="about-text">With this ID system, validating a delivery becomes easy: I simply compare the ID of the
+        <p class="default-text">With this ID system, validating a delivery becomes easy: I simply compare the ID of the
             object the player handed in against the expected ID for the quest, and if they match, the objective is
             complete. Since every relevant property (type, difficulty, base object, materials, and symbol) is already
             baked into the ID itself, there's no need for separate checks or special-case logic per quest, one
             comparison covers it all.</p>
     </section>
 
-    <section class="project-body">
+    <section>
         <h2>Tools</h2>
         <h3 class="tool-title">Layout Wizard</h3>
-        <p class="about-text">We use a semi-random generation approach when creating levels. Rooms are hand-crafted and
+        <p class="default-text">We use a semi-random generation approach when creating levels. Rooms are hand-crafted and
             then connected into a layout, which is later randomized to create variation. To make the level layout
             pipeline more efficient, I implemented a custom tool that handles saving and loading layouts. This wizard
             stores all layout data in a ScriptableObject, which is assigned a name and a number. The number acts as an
             identifier for the layout in-game.</p>
-        <p class="about-text">You can then reference this ScriptableObject to load and update a specific layout. The
+        <p class="default-text">You can then reference this ScriptableObject to load and update a specific layout. The
             tool itself is a custom Unity window, accessible from the top toolbar. It provides helpful error messages to
             guide you if something is missing or set up incorrectly. Once everything is in place, I can randomize
             between ScriptableObjects and spawn a specific layout as needed.</p>
         <img src="../images/layout-wizard.gif" alt="Layout wizard Gif" class="gif">
         <h3>Object visualizer</h3>
-        <p class="about-text">I developed an object visualization tool to streamline scene placement and debugging. You
+        <p class="default-text">I developed an object visualization tool to streamline scene placement and debugging. You
             can toggle the visuals for convenience, filter by object type, and set the maximum spawn difficulty. The
             visualizer dynamically syncs with the target object's position, rotation, and scale. </p>
         <img src="../images/item-visuals.gif" alt="Item generation Gif" class="gif">
 
     </section>
 
-    <section class="project-body">
+    <section>
         <h2>Take Aways</h2>
-        <p class="about-text">This project taught me the importance of building flexible and maintainable systems. By
+        <p class="default-text">This project taught me the importance of building flexible and maintainable systems. By
             implementing a robust ID system and custom tools, we were able to significantly reduce development time
             while improving the overall quality of the game's level design. It also gave me a stronger understanding of
             how networked systems work, as well as what I would approach differently in future projects. Going through
