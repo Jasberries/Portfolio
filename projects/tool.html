@@ -63,7 +63,7 @@
 
     <section class="project-info">
         <div class="project-about">
-            <h2>Overview</h2>
+            <h2 class="white-title">Overview</h2>
             <p class="default-text">
                 This is my personal library of useful tools and utilities that I have created over the years. It
                 includes a variety of scripts, plugins, and other resources that can help streamline development
@@ -94,10 +94,6 @@
     </section>
 
     <section>
-        <h2>MORE COMING SOON</h2>
-    </section>
-
-    <section>
         <h2>Console</h2>
         <p class="default-text">A console that can be used to log messages, warnings, and errors. It can also be used to
             execute commands and display the results. The console is designed to be easy to use and customizable.</p>
@@ -118,7 +114,19 @@
 
     <section>
         <h2>Feedback System</h2>
-        <p class="default-text">A system for collecting and sending user feedback through mail.</p>
+        <p class="default-text"> A system for collecting and sending user feedback via email. Players can optionally
+            include a screenshot, which they can draw on to provide additional context. The system also automatically
+            attaches the player log, removing the need for users to locate and include it manually.</p>
+
+        <img src="../images/Coming-soon.png" alt="Feedback System screenshot" class="project-image-1">
+
+        <p class="default-text"> Due to limitations with Google's email services, messages can only be sent from an
+            account you control, so the email and password is hardcoded in to the project. To address this, a dedicated
+            throwaway email account is used. This minimizes risk, as it prevents exposure of any primary or sensitive
+            accounts. If the account were ever compromised, it can simply be discarded without any significant impact.
+            As an alternative, a dedicated server can be used to handle the creation and sending of emails, providing a
+            more secure and controlled solution. </p>
+
     </section>
 
     <section>
@@ -126,24 +134,24 @@
         <p class="default-text">A collection of miscellaneous tools and utilities that are too small for their own
             section.</p>
 
-        <h3 class="small-title">Bootstrap Manager</h3>
+        <h3>Bootstrap Manager</h3>
         <p class="default-text">A bootstrapper (aka. Single Entry Point) is a system that initializes the application
             and sets up the basic infrastructure. This is useful for games that have multiple scenes and have
             overarching systems that should always be available.</p>
 
-        <h3 class="small-title">Input System</h3>
+        <h3>Input System</h3>
         <p class="default-text"> An input system built on Unity's new Input System. It uses C# events to handle input
             callbacks and supports every kind of input functionality. Each input is encapsulated in a struct, making
             it easy to extend and integrate new inputs into the system. </p>
 
-        <h3 class="small-title">Sceneloader</h3>
+        <h3>Sceneloader</h3>
         <p class="default-text">A custom scene loading system that supports asynchronous loading and unloading. The
             system loads a scene into a specific category. (Gameplay, UI, etc.)</p>
 
-        <h3 class="small-title">Liquid Shader</h3>
+        <h3>Liquid Shader</h3>
         <p class="default-text">A liquid shader that reacts to the orientation of the object.</p>
 
-        <h3 class="small-title">Key Rebinder</h3>
+        <h3>Key Rebinder</h3>
         <p class="default-text">A tool for remapping keyboard shortcuts in Unity. It's meant to be a simple drag and
             drop solution.</p>
     </section>

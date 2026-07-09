@@ -30,6 +30,7 @@ h1,
 h2,
 h3 {
     font-family: Merriweather, Poppins, 'Segoe UI';
+    color: var(--primary-color)
 }
 
 h1 {
@@ -392,6 +393,11 @@ header img {
 .small-title {
     margin-top: 1em;
 }
+
+.white-title {
+    color: var(--text-color);
+}
+
 
 .project-quick-info {
     font-size: 0.9em;
