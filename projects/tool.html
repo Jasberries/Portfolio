@@ -56,8 +56,10 @@
         <a href="../index.html#projects" class="cta-button"><i class="fas fa-arrow-left project-arrow"></i> Back to
             Projects</a>
         <h1>
-            <p class="project-title"> Utility & Tools </p>
+            <a class="project-title-link"> Utility & Tools </a>
         </h1>
+        <img src="../images/tools-keyart.png" alt="Tools screenshot" class = "project-image-2">
+
 
     </section>
 
@@ -95,8 +97,8 @@
 
     <section>
         <h2>Console</h2>
-        <p class="default-text">A console that can be used to log messages, warnings, and errors. It can also be used to
-            execute commands and display the results. The console is designed to be easy to use and customizable.</p>
+        <p class="default-text">A console that can be used to log warnings and errors. It can also be used to
+            execute commands and display the results. The console is designed to be easy to use and customizable. </p>
     </section>
 
     <section>
@@ -108,8 +110,35 @@
 
     <section>
         <h2>Hierarchy Icon Display</h2>
-        <p class="default-text">A tool that displays icons in the Hierarchy window to provide quick visual cues about
-            the objects and their types.</p>
+        <p class="default-text"> A custom editor plugin that displays icons in the Hierarchy window, providing quick
+            visual cues about objects and their types. This improves both readability and navigation, making it easier
+            to quickly locate specific objects while also enhancing the overall look of the editor. </p>
+
+        <p class="default-text"> The system is based on a priority list, where the highest-priority component on an
+            object determines which icon is displayed. The priority order is as follows: </p>
+
+        <p>- Custom Scripts</p>
+        <p>- UI</p>
+        <p>- Rendering</p>
+        <p>- Physics</p>
+        <p>- Animation</p>
+        <p>- Input</p>
+        <p>- Effects</p>
+        <p>- Networking</p>
+        <p>- AI</p>
+        <p>- Other</p>
+        <p>- Transform</p>
+
+        <img src="../images/Coming-soon.png" alt="Feedback System screenshot" class="project-image-1">
+
+        <p class="default-text">Only the highest-priority component attached to an object is used to determine its
+            icon. An alternative approach would be to display the icon of the first component on the
+            object (excluding the Transform component if others are present). This could reduce manual setup, which is
+            currently the main drawback of the system. At the moment, custom scripts need to be manually assigned to the
+            “Custom Scripts” category, requiring additional effort to locate and organize them within the priority list.
+            This is something that i want to address in the future.
+        </p>
+
     </section>
 
     <section>
