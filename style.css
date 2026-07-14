@@ -30,6 +30,7 @@ h1,
 h2,
 h3 {
     font-family: Merriweather, Poppins, 'Segoe UI';
+    color: var(--primary-color)
 }
 
 h1 {
@@ -330,6 +331,15 @@ header img {
     padding: 1.75em 1.25em;
 }
 
+.project-image-1 {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    margin: 2em auto;
+    display: block;
+}
+
 .project-image-2 {
 
     width: 100%;
@@ -340,13 +350,20 @@ header img {
     display: block;
 }
 
-.project-image-1 {
+.project-image-3 {
+
     width: 100%;
     max-width: 400px;
     height: auto;
     object-fit: contain;
-    margin: 2em auto;
+    margin: 2em 2em 2em 0;
     display: block;
+}
+
+code {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    background-color: var(--base-color);
 }
 
 .default-text {
@@ -389,9 +406,14 @@ header img {
     margin-left: 20px;
 }
 
-.tool-title {
+.small-title {
     margin-top: 1em;
 }
+
+.white-title {
+    color: var(--text-color);
+}
+
 
 .project-quick-info {
     font-size: 0.9em;
@@ -451,6 +473,14 @@ footer a:hover {
 
 #mobile-topbar {
     display: none;
+}
+
+.project-intro img {
+    border-radius: 1em;
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--text-color);
+    margin: 2em auto;
 }
 
 @media (max-width: 1000px) {
@@ -534,6 +564,7 @@ footer a:hover {
     .flex-container {
         margin-top: 4em;
     }
+
 
     #mobile-topbar {
         display: flex;
