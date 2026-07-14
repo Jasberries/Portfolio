@@ -58,7 +58,7 @@
         <h1>
             <a class="project-title-link"> Utility & Tools </a>
         </h1>
-        <img src="../images/tools-keyart.png" alt="Tools screenshot" class = "project-image-2">
+        <img src="../images/tools-keyart.png" alt="Tools screenshot" class="project-image-2">
 
 
     </section>
@@ -81,7 +81,7 @@
             <p class="quick-info-row"><i class="fas fa-circle-user quick-image"></i> <strong>Role:</strong> Programmer
             </p>
             <p class="quick-info-row"><i class="fas fa-clock quick-image"></i> <strong>Time frame:</strong> Ongoing</p>
-            <p class="quick-info-row"><i class="fas fa-users quick-image"></i> <strong>Team size:</strong> 1 dev
+            <p class="quick-info-row"><i class="fas fa-users quick-image"></i> <strong>Team size:</strong> 1
             </p>
             <p class="quick-info-row"><i class="fab fa-unity quick-image"></i> <strong>Unity</strong> (C#)</p>
         </div>
@@ -97,16 +97,34 @@
 
     <section>
         <h2>Console</h2>
-        <p class="default-text">A console that can be used to log warnings and errors. It can also be used to
-            execute commands and display the results. The console is designed to be easy to use and customizable. </p>
+        <p class="default-text"> One feature I've often missed when working in Unity is an in-game console for executing
+            commands and displaying results. To address this, I implemented a console system that can also log warnings
+            and errors, making it easier to debug issues in built versions of the game. </p>
+
+        <p class="default-text"> The console is designed to be simple to use and easy to extend. New commands can be
+            added by implementing the <code>IConsoleCommand</code> interface, which exposes properties such as name and
+            description, along with an execute function and optional presets for predefined arguments. This makes it
+            straightforward to quickly add new functionality without modifying the core system. </p>
+
+        <img src="../images/Console.gif" alt="Console gif" class="gif">
+
+
+        <p class="default-text"> To improve usability, the console includes features such as auto-complete, helping
+            users quickly find and execute commands as they type. It also supports command history, allowing users to
+            navigate through previously entered commands using the up and down arrow keys. </p>
+
+
+
     </section>
 
+    <!--
     <section>
         <h2>First Person Controller</h2>
-        <p class="default-text">A first-person controller that provides smooth movement and camera control for player
+        <p class="default-text">A first person controller that provides smooth movement and camera control for player
             characters in Unity. It includes features for walking, running, jumping, and interacting with the
             environment.</p>
     </section>
+    -->
 
     <section>
         <h2>Hierarchy Icon Display</h2>
@@ -129,9 +147,9 @@
         <p>- Other</p>
         <p>- Transform</p>
 
-        <img src="../images/Coming-soon.png" alt="Feedback System screenshot" class="project-image-1">
+        <img src="../images/Hierarchy-icons.png" alt="Hierarchy Icon Display screenshot" class="project-image-3">
 
-        <p class="default-text">Only the highest-priority component attached to an object is used to determine its
+        <p class="default-text">Only the highest priority component attached to an object is used to determine its
             icon. An alternative approach would be to display the icon of the first component on the
             object (excluding the Transform component if others are present). This could reduce manual setup, which is
             currently the main drawback of the system. At the moment, custom scripts need to be manually assigned to the
@@ -146,8 +164,6 @@
         <p class="default-text"> A system for collecting and sending user feedback via email. Players can optionally
             include a screenshot, which they can draw on to provide additional context. The system also automatically
             attaches the player log, removing the need for users to locate and include it manually.</p>
-
-        <img src="../images/Coming-soon.png" alt="Feedback System screenshot" class="project-image-1">
 
         <p class="default-text"> Due to limitations with Google's email services, messages can only be sent from an
             account you control, so the email and password is hardcoded in to the project. To address this, a dedicated
