@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/Logo_SDS_Square.ico" type="image/x-icon">
+    <title>Gizmo | Jesper Larsson</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="mobile-topbar">
+        <a href="../index.html" class="mobile-topbar-name">Jesper Larsson</a>
+        <button id="open-sidebar-button" onclick="openSidebar()">
+            <i class="fas fa-bars navbar-button"></i>
+        </button>
+    </div>
+
+    <div id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="../index.html">Jesper Larsson</a></li>
+            <button id="close-sidebar-button" onclick="closeSidebar()">
+                <i class="fas fa-x navbar-button"></i>
+            </button>
+            <li> <a href="../index.html#projects">
+                    <span class="nav-link-text"><i class="fas fa-code"></i>Projects</span> </a>
+            </li>
+
+            <li> <a href="https://github.com/Jasberries" target="_blank">
+                    <span class="nav-link-text"><i class="fab fa-github"></i>GitHub</span> </a>
+            </li>
+
+            <li> <a href="https://jas-berry.itch.io/" target="_blank">
+                    <span class="nav-link-text"><i class="fab fa-itch-io"></i>Itch</span> </a>
+            </li>
+
+            <li> <a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank">
+                    <span class="nav-link-text"><i class="fab fa-linkedin"></i>LinkedIn</span> </a>
+            </li>
+
+            <li> <a href="../CV/Jesper Larsson Game Programmer.pdf" target="_blank">
+                    <span class="nav-link-text"><i class="fas fa-file-lines"></i>CV</span> </a>
+            </li>
+
+            <li> <a href="mailto:jesper.gc.larsson@gmail.com">
+                    <span class="nav-link-text"><i class="fas fa-address-book"></i>Contact</span> </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="project-intro">
+        <a href="../index.html#projects" class="cta-button"><i class="fas fa-arrow-left project-arrow"></i> Back to
+            Projects</a>
+        <h1>
+            <a class="project-title-link"> Gizmo's Idle AD:venture </a>
+        </h1>
+        <img src="../images/gizmo-keyart.png" alt="Gizmo screenshot" class="project-image-2">
+    </section>
+
+    <section class="project-info">
+        <div class="project-about">
+            <h2>Overview</h2>
+            <p class="default-text">
+                This game consists of two seperate applications that communicate with each other localy through a bit
+                file. The first application is a desktop buddy that guides the player through the game and provides a
+                fun and interactive experience. The second application is a collection of minigames that is disguised as
+                advertisements. The player needs to complete the minigame in order to close the ad.
+            </p>
+        </div>
+
+        <div class="quick-info">
+            <h2 class="quick-info-title">Info</h2>
+            <p class="quick-info-row"><i class="fas fa-circle-user quick-image"></i> <strong>Role:</strong> Solo Dev</p>
+            <p class="quick-info-row"><i class="fas fa-clock quick-image"></i> <strong>Time frame:</strong> Ongoing</p>
+            <p class="quick-info-row"><i class="fas fa-users quick-image"></i> <strong>Team size:</strong> Me, myself &
+                I</p>
+            <p class="quick-info-row"><i class="fab fa-unity quick-image"></i> <strong>Unity</strong> (C#)</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Contributions</h2>
+        <p class="default-text">- Memory Mapped File Writer</p>
+        <p class="default-text">- Window Modifier</p>
+        <p class="default-text">- Dialogue System</p>
+    </section>
+
+    <section>
+        <h2>Memory Mapped File Writer</h2>
+        <p class="default-text">All the communication between the two applications is handled through a memory-mapped
+            bit file. The applications has its own memory space allocated that they can read & write from. Whenever the
+            the file gets updated, an event is sent to all application to check if any changes was made in there memory
+            space. This communication task just a few frames witch makes it very responsive and since it's all local, it
+            doesn't require any internet connection.
+        </p>
+
+        <p class="default-text"> A challenge I ran into was that if you would send multiple messages in a row, the event
+            would
+            only trigger once, and the applications would only read the last message. To fix this, I implemented a ring
+            buffer. A ring buffer is a fixed-size circular queue: when you reach the end, you wrap back around to the
+            start. </p>
+
+        <p><strong>How it works:</strong></p>
+        <p>- You have a <em>head</em> position and a <em>tail</em> position.</p>
+        <p>- Write advances the head, read advances the tail.</p>
+        <p>- If head catches tail the buffer is full, if tail catches head it's empty.</p>
+
+        <p class="default-text">I decided to go with this approach mainly because it made it easy to reuse the allocated
+            memory, which meant that the bit file didn't need to grow too much. The fast O(1) operation time was a
+            bonus, since I needed the send & receive times to be as short as possible to reduce latency.</p>
+
+    </section>
+
+    <section>
+        <h2>Window Modifier</h2>
+        <p class="default-text">The game uses a lot of windows manipulation like resizing, moving, hiding windows, etc.
+            For this I'm calling the Windows API through C#. I have never worked directly with the Windows API before,
+            so it was a challenge to find what was possible and to keep track of all the flag values so made a small
+            wrapper class to make it easier to use and to keep the code clean.
+        </p>
+
+        <p class="default-text">There was a lot of trial and error when it came to testing and figuring out the order in
+            which everything should run. It also didn't help that I had to build the project every time I wanted to test
+            it, since the code would modify the Unity Editor window, making it nearly impossible to work with because of
+            all the moving and scaling (and sometimes softlocks).</p>
+
+        <p class="default-text">One problem I haven't found a perfect solution for is the desynchronization between
+            Windows' internal update loop and Unity's. Since the Windows API runs on a separate thread that Unity does
+            not have access to, it is nearly impossible to synchronize the two 100%. This only becomes a problem when
+            trying to match the movement of in-game objects with the movement of the window. To get them as closely
+            synchronized as possible, I update the position immediately before the camera renders.</p>
+    </section>
+
+    <section>
+        <h2>Dialogue System</h2>
+        <p class="default-text">I built an easy-to-use, editable dialogue system for the game. It reads dialogue data
+            from a <code>.cvs</code> file, stores that data in memory, and feeds lines into the dialogue writer using
+            the <a href="https://tools.febucci.com/text-animator/unity" class="text-link" target="_blank"><strong>Text
+                    Animator</strong></a> asset. The game currently uses one-way conversations (game → player), so the
+            CSV holds columns like: dialogue text, next dialogue ID, an event to trigger when the line finishes, and
+            developer notes. The system is designed to be extensible, adding speaker IDs, portrait references, player
+            responses and so on.
+        </p>
+
+        <p class="default-text">The system can detect when you want to call a function in the dialogue (for example, to
+            play an animation or sound effect at a specific time). All you need to do is write
+            <code>&lt;eventName&gt;</code> and the script will execute the function associated with that name.
+        </p>
+
+        <p class="default-text">All of this makes it easy to write dialogue for the game, even if you are not proficient
+            with the engine or familiar with all the ins and outs of the game. Anyone can use the system, and it makes
+            finding and adding new dialogue quick and painless.</p>
+    </section>
+
+    <section>
+        <h2>Take Aways</h2>
+        <p class="default-text">I learned a lot about the possibilities and limitations of using the Windows OS in game
+            development. Unity may not have been the best engine for this project, but I'm still glad I tried it,
+            because I can reuse many of the things I learned in future projects. And at the end of the day, it has been
+            a really fun & creative project to work on.</p>
+    </section>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/jesper-larsson-2ab800262/" target="_blank">LinkedIn</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="mailto:jesper.gc.larsson@gmail.com">Contact</a>
+    </footer>
+    <script src="../script.js" defer></script>
+</body>
+
+</html>

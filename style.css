@@ -8,6 +8,7 @@
     --color-1: #1E242E;
     --color-2: #7C8694;
     --color-3: #5EA8BA;
+    --content-width: min(75em + 10vw, 96%);
 }
 
 * {
@@ -59,7 +60,7 @@ section {
 
 nav {
     margin: 0 auto 3em auto;
-    width: min(2000px, 100%);
+    width: min(3000px, 100%);
     position: sticky;
     top: 0;
     background-color: rgba(30, 36, 46, 0.85);
@@ -365,6 +366,20 @@ code {
     color: var(--primary-color);
     background-color: var(--base-color);
 }
+
+.text-link {
+    color: var(--text-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    word-break: break-word;
+}
+
+.text-link:hover {
+    color: var(--primary-color);
+}
+
 
 .default-text {
     margin-top: 0.5em;
