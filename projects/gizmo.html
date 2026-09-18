@@ -129,7 +129,7 @@
             all the moving and scaling (and sometimes softlocks).</p>
 
         <p class="default-text">One problem I haven't found a perfect solution for is the desynchronization between
-            Windows' internal update loop and Unity's. Since the Windows API runs on a separate thread that Unity does
+            Windows internal update loop and Unity's. Since the Windows API runs on a separate thread that Unity does
             not have access to, it is nearly impossible to synchronize the two 100%. This only becomes a problem when
             trying to match the movement of in-game objects with the movement of the window. To get them as closely
             synchronized as possible, I update the position immediately before the camera renders.</p>
@@ -142,8 +142,8 @@
             the <a href="https://tools.febucci.com/text-animator/unity" class="text-link" target="_blank"><strong>Text
                     Animator</strong></a> asset. The game currently uses one-way conversations (game → player), so the
             CSV holds columns like: dialogue text, next dialogue ID, an event to trigger when the line finishes, and
-            developer notes. The system is designed to be extensible, adding speaker IDs, portrait references, player
-            responses and so on.
+            developer notes. The system is designed to be flexible so adding speaker IDs, portrait references, player
+            responses and so on, is a quick and easy process.
         </p>
 
         <p class="default-text">The system can detect when you want to call a function in the dialogue (for example, to
