@@ -92,7 +92,8 @@
     <section>
         <h2>Memory Mapped File Writer</h2>
         <p class="default-text">All the communication between the two applications is handled through a memory-mapped
-            bit file. The applications has its own memory space allocated that they can read and write from. Whenever the
+            bit file. The applications has its own memory space allocated that they can read and write from. Whenever
+            the
             the file gets updated, an event is sent to all application to check if any changes was made in there memory
             space. This communication task just a few frames witch makes it very responsive and since it's all local, it
             doesn't require any internet connection.
@@ -128,7 +129,7 @@
             it, since the code would modify the Unity Editor window, making it nearly impossible to work with because of
             all the moving and scaling (and sometimes softlocks).</p>
 
-            <img src="../images/GizmoWindow.gif" alt="Window Gif" class="gif">
+        <img src="../images/GizmoWindow.gif" alt="Window Gif" class="gif">
 
         <p class="default-text">One problem I haven't found a perfect solution for is the desynchronization between
             Windows internal update loop and Unity's. Since the Windows API runs on a separate thread that Unity does
@@ -147,6 +148,10 @@
             developer notes. The system is designed to be flexible so adding speaker IDs, portrait references, player
             responses and so on, is a quick and easy process.
         </p>
+
+        <a href="https://tools.febucci.com/text-animator/unity" target="_blank">
+            <img class="project-image-1" src="../images/TextAnimator.png" alt="Text Animator Logo">
+        </a>
 
         <p class="default-text">The system can detect when you want to call a function in the dialogue (for example, to
             play an animation or sound effect at a specific time). All you need to do is write

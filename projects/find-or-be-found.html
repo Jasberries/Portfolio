@@ -62,8 +62,7 @@
                 Find or be Found <i class="fab fa-steam" aria-hidden="true"></i>
             </a>
         </h1>
-        <iframe src="https://www.youtube.com/embed/7zO53yoWYuk" title="Project gameplay video"
-            frameborder="3"
+        <iframe src="https://www.youtube.com/embed/7zO53yoWYuk" title="Project gameplay video" frameborder="3"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
         </iframe>
@@ -78,7 +77,8 @@
                 proved both challenging and highly rewarding. I gained hands-on experience across the full development
                 cycle, from prototyping to release and post-launch support. Since the project was self-funded, my
                 availability varied. Throughout development, I contributed between 30% and 100% of my time to the
-                project. During the finalsix months, we collaborated with two interns in design and 3D art, an experience
+                project. During the finalsix months, we collaborated with two interns in design and 3D art, an
+                experience
                 that was valuable for both them and me.
             </p>
         </div>
@@ -90,7 +90,8 @@
             <p class="quick-info-row"><i class="fab fa-steam quick-image"></i> <strong>Steam</strong> (PC)</p>
             <p class="quick-info-row"><i class="fas fa-circle-user quick-image"></i> <strong>Role:</strong> Programmer &
                 Designer</p>
-            <p class="quick-info-row"><i class="fas fa-clock quick-image"></i> <strong>Time frame:</strong> 1.5 years (part-time)</p>
+            <p class="quick-info-row"><i class="fas fa-clock quick-image"></i> <strong>Time frame:</strong> 1.5 years
+                (part-time)</p>
             </p>
             <p class="quick-info-row"><i class="fas fa-users quick-image"></i> <strong>Team size:</strong> 4 +
                 2 interns</p>
@@ -113,12 +114,15 @@
         <h2>Networking</h2>
         <p class="default-text">
             This was my first time diving into networking development. I started by exploring different solutions that
-            would best fit the project and ultimately decided on FishNet Networking Evolved. I chose FishNet because it
-            felt flexible and easy to work with. It also has an active Discord community where you can get help with
+            would best fit the project and ultimately decided on <a href="https://fish-networking.gitbook.io/docs"
+                class="text-link" target="_blank"><strong>Fish Networking Evolved</strong></a>. I chose FishNet because
+            it felt flexible and easy to work with. It also has an active Discord community where you can get help with
             specific questions, which was a lifesaver for me since I used it A LOT.
         </p>
 
-        <img class="project-image-1" src="../images/fishnet_with_text_light.png" alt="FishNet Logo">
+        <a href="https://fish-networking.gitbook.io/docs" target="_blank">
+            <img class="project-image-1" src="../images/fishnet_with_text_light.png" alt="FishNet Logo">
+        </a>
 
         <p class="default-text">
             We decided to make Find or be Found multiplayer partway through development, after already building a
@@ -163,7 +167,8 @@
     <section>
         <h2>Tools</h2>
         <h3 class="small-title">Layout Wizard</h3>
-        <p class="default-text">We use a semi-random generation approach when creating levels. Rooms are hand-crafted and
+        <p class="default-text">We use a semi-random generation approach when creating levels. Rooms are hand-crafted
+            and
             then connected into a layout, which is later randomized to create variation. To make the level layout
             pipeline more efficient, I implemented a custom tool that handles saving and loading layouts. This wizard
             stores all layout data in a ScriptableObject, which is assigned a name and a number. The number acts as an
@@ -174,7 +179,8 @@
             between ScriptableObjects and spawn a specific layout as needed.</p>
         <img src="../images/layout-wizard.gif" alt="Layout wizard Gif" class="gif">
         <h3 class="small-title">Object visualizer</h3>
-        <p class="default-text">I developed an object visualization tool to streamline scene placement and debugging. You
+        <p class="default-text">I developed an object visualization tool to streamline scene placement and debugging.
+            You
             can toggle the visuals for convenience, filter by object type, and set the maximum spawn difficulty. The
             visualizer dynamically syncs with the target object's position, rotation, and scale. </p>
         <img src="../images/item-visuals.gif" alt="Item generation Gif" class="gif">
